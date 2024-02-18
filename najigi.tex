@@ -102,8 +102,8 @@ Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, 
 
 \begin{tabularx}{\textwidth}{c|CCCCCC}
 & \STR & \DEX & \KNO & \ACU & \WIL & \CHA \\\hline
-\STR & \nameref{Berserker} & \nameref{Grappler} & \nameref{Gladiator} & \nameref{Guardian} & \nameref{Chimera} & \nameref{Knight} \\
-\DEX & \nameref{Assassin} & \nameref{Ninja} & Duelist & & Sanguine & Pirate \\
+\STR & \nameref{Berserker} & \nameref{Grappler} & Gladiator & \nameref{Guardian} & Chimera & \nameref{Knight} \\
+\DEX & Assassin & Ninja & Duelist & & Sanguine & Pirate \\
 \KNO & Alchemist & Wright & Tactician & & Wizard & Contractor \\
 \ACU & & Deadeye & & Seer & Witch &  \\
 \WIL & Telekinetic & Shaper & Empyrean & & Eidolon & Gambler \\
@@ -115,6 +115,10 @@ Class skills have flavor text and rules text.
 Flavor text will be in \textit{italics}, and should be ignored when making rulings.
 
 \begin{itemize}
+\item Gladiator: Ploy: add a special effect to your next attack
+\item Chimera
+\item Assassin: Hide: increase damage when attacking from stealth
+\item Ninja: Stun
 \item Duelist
 \item Sanguine: Bite: gain power by sacrificing blood, including your own
 \item Pirate
@@ -153,10 +157,6 @@ Flavor text will be in \textit{italics}, and should be ignored when making rulin
 {Your hand shoots out and locks your opponent in place.}
 {TODO: add restrained condition}
 
-\Class{Gladiator}
-
-TODO: Ploy: add a special effect to your next attack
-
 \Class{Guardian}
 
 \Skill{1}{Block}{\Defend}
@@ -167,20 +167,14 @@ TODO: Ploy: add a special effect to your next attack
 {Your block has left your enemy wide open.}
 {You may act for up to [\ACU] seconds during this reaction.}
 
-\Class{Chimera}
-
-TODO: Turn: transform into a beast form
-
 \Class{Knight}
 
-TODO: Ride
+\Skill{1}{Ride}{TODO}
+{TODO}
+{TODO: choose a mount}
 
-\Class{Assassin}
-
-TODO: Hide: increase damage when attacking from stealth
-
-\Class{Ninja}
-
-TODO: Stun
+\Skill{2}{Charge}{TODO}
+{TODO}
+{TODO: add scaled movement speed to damage}
 
 \end{document}
