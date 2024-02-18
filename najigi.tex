@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+
+\titleformat*{\section}{\LARGE}
+\titleformat*{\subsection}{\Large}
+\titleformat*{\subsubsection}{\large}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\renewcommand{\arraystretch}{1.5}
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+\setlength{\parindent}{0mm}
+\frenchspacing
+
+\newcommand{\STR}{\texttt{STR}}
+\newcommand{\DEX}{\texttt{DEX}}
+\newcommand{\KNO}{\texttt{KNO}}
+\newcommand{\ACU}{\texttt{ACU}}
+\newcommand{\WIL}{\texttt{WIL}}
+\newcommand{\CHA}{\texttt{CHA}}
+\newcommand{\HP}{\texttt{HP}}
+\newcommand{\SP}{\texttt{SP}}
+\newcommand{\ACC}{\texttt{ACC}}
+\newcommand{\DAM}{\texttt{DAM}}
+\newcommand{\X}{\text{{\lower 0.2mm \hbox{X}}}}
+\newcommand{\TIME}[1]{\{time: #1 second\if1=#1{}\else{s}\fi\}}
+\newcommand{\TRIG}[1]{\{trigger: #1\}}
+\newcommand{\Attack}[1]{\{Attack, time: #1 second\if1=#1{}\else{s}\fi\}}
+\newcommand{\Defend}{\{Defend, trigger: incoming Attack\}}
+\newcommand{\dice}[2]{\text{#1d#2}}
+
+\newcommand{\Class}[1]{\pagebreak\subsection{#1}\label{#1}}
+\newcommand{\Skill}[5]{\subsubsection{Level #1: #2 #3}\textit{#4}\\[1mm]#5}
+
+\title{Najigi}
+\author{Alex Fischman}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\clearpage
+
+\pagebreak
+\section{Attributes}
+
+\begin{tabularx}{\textwidth}{C|C C}
+& Static & Dynamic \\\hline
+Body (Physical) & Strength & Dexterity \\
+Mind (Mental) & Knowledge & Acuity \\
+Soul (Spiritual) & Willpower & Charisma
+\end{tabularx}
+
+\begin{itemize}
+\item Strength [\STR] represents power, athleticism, and endurance.
+\item Dexterity [\DEX] represents speed, agility, and reflexes.
+\item Knowledge [\KNO] represents memory, wisdom, and reasoning.
+\item Acuity [\ACU] represents astuteness, intuition, and perceptiveness.
+\item Willpower [\WIL] represents certainty, resolve, and commitment.
+\item Charisma [\CHA] represents charm, sociality, and eloquence.
+\end{itemize}
+
+\subsection{Stats}
+
+\begin{itemize}
+\item Health [\HP]: how much damage you can take before being unable to fight.
+\item Speed [\SP]: how fast you can walk over simple terrain, usually 1 space per second.
+\end{itemize}
+
+Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with square grids, each side should be 1.5m long. For maps with hexagonal grids, each hexagon’s \textit{short diagonal} should be 1.5m long.
+
+\pagebreak
+\section{Actions}
+
+Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of 6 seconds. Actions with trigger conditions (called \textit{reactions}) can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time.
+
+The following actions may be performed by any character.
+\begin{itemize}
+\item Walk \TIME{\X}: move [$\SP * \X$] spaces across simple terrain. During this time, you may perform actions that do not require the use of your legs.
+\item Run \TIME{\X}: move [$\SP * \X * 2$] spaces across simple terrain.
+\item Hike/Climb/Swim \TIME{\X}: move [$\SP * \X / 2$] spaces over difficult terrain, along a wall, or through water.
+\item High Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces straight upwards.
+\item Long Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces across a gap.
+\item Punch \Attack{2}: make a single-target Attack against a target in melee range. The attack has [\DEX{}] accuracy and does [\STR{}] damage.
+\item Dodge \Defend: if the accuracy roll is less than [$10 + \DEX{}$], the Attack fails.
+\item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as a reaction.
+\item Other: if you want to perform an action not described in the rules, the GM will tell you whether that action is possible, how long it will take, and what kind of roll you need to make, if any, to determine whether you are successful.
+\end{itemize}
+
+\subsection{Attacks}
+
+Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend reactions, if they have any. If none of the Defend reactions stop your Attack, the attack succeeds, and the target loses [\DAM] health.
+
+\pagebreak
+\section{Classes}
+
+\begin{tabularx}{\textwidth}{c|CCCCCC}
+& \STR & \DEX & \KNO & \ACU & \WIL & \CHA \\\hline
+\STR & \nameref{Berserker} & \nameref{Grappler} & \nameref{Gladiator} & \nameref{Guardian} & \nameref{Chimera} & \nameref{Knight} \\
+\DEX & \nameref{Assassin} & \nameref{Deadeye} & \nameref{Duelist} & \nameref{Ninja} & \nameref{Sanguine} & \nameref{Pirate} \\
+\KNO & Alchemist & Wright & Tactician & & Wizard & Contractor \\
+\ACU & & & & Seer & Witch &  \\
+\WIL & Telekinetic & Shaper & Empyrean & & Eidolon & Gambler \\
+\CHA & & & Summoner & Psychic & Shaman & Bard \\
+\end{tabularx}
+\\[5mm]
+Class skills have flavor text and rules text.
+
+Flavor text will be in \textit{italics}, and should be ignored when making rulings.
+
+\begin{itemize}
+\item Alchemist: Brew: create magical potions with radical effects.
+\item Wright: Make: create a nonmagical item out of raw materials.
+\item Tactician: Plan: something that rewards readying actions.
+\item Wizard
+\item Contractor (TODO: better name): Bind: form a magically enforced contract
+\item Seer: Gaze: see into the future to decide what path to take.
+\item Witch
+\item Telekinetic: Push and Pull: throw objects around
+\item Shaper: Form: metamagic (TODO: change to Magician?)
+\item Empyrean: Warp: twist space to control the battlefield.
+\item Eidolon: Cast: perform magic using nothing but yourself
+\item Gambler: Roll: summon a random magical effect.
+\item Summoner: Call: summon magical creatures to fight in your stead.
+\item Psychic
+\item Shaman
+\item Bard: Play: use your instrument to apply buffs and debuffs.
+\end{itemize}
+
+\Class{Berserker}
+
+\Skill{1}{Rage}{\TIME{1}}
+{You enter a blind rage, swinging your weapon wildly and dropping your guard.}
+{Until the start of your next turn, your melee attacks do twice as much damage, but you take twice as much damage from melee attacks.}
+
+\Skill{2}{Windup}{\TIME{1}}
+{You put all of your strength behind a mighty blow.}
+{Your next melee attack has [\STR] less accuracy but does [\STR] extra damage.}
+
+\Class{Grappler}
+
+\Skill{1}{Hold}{\TRIG{successful Punch}}
+{Your hand shoots out and locks your opponent in place.}
+{TODO: add restrained condition}
+
+\Class{Gladiator}
+
+TODO: Ploy: add a special effect to your next attack
+
+\Class{Guardian}
+
+\Skill{1}{Block}{\Defend}
+{You bat away an incoming sword strike.}
+{If the accuracy roll is less than [$10 + \STR$], the Attack fails.}
+
+\Skill{2}{Riposte}{\TRIG{successful Block}}
+{Your block has left your enemy wide open.}
+{You may act for up to [\ACU] seconds during this reaction.}
+
+\Class{Chimera}
+
+TODO: Turn: transform into a beast form
+
+\Class{Knight}
+
+TODO: Ride
+
+\Class{Assassin}
+
+TODO: Hide: increase damage when attacking from stealth
+
+\Class{Deadeye}
+
+TODO: Seek
+
+\Class{Duelist}
+
+\Class{Ninja}
+
+TODO: Stun
+
+\Class{Sanguine}
+
+TODO: Bite: gain power by sacrificing blood, including your own
+
+\Class{Pirate}
+
+\end{document}
