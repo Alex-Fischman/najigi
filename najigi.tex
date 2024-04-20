@@ -14,7 +14,7 @@
 \renewcommand{\arraystretch}{1.5}
 
 \setcounter{secnumdepth}{0}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \setlength{\parindent}{0mm}
 \frenchspacing
 
@@ -35,7 +35,7 @@
 \newcommand{\Defend}{\{Defend, trigger: incoming Attack\}}
 \newcommand{\dice}[2]{\text{#1d#2}}
 
-\newcommand{\Class}[1]{\pagebreak\subsection{#1}\label{#1}}
+\newcommand{\Class}[3]{\pagebreak\subsection{#1 (#2)}\label{#1}\textit{#3}}
 \newcommand{\Skill}[5]{\subsubsection{Level #1: #2 #3}\textit{#4}\\[1mm]#5}
 
 \title{Najigi}
@@ -102,53 +102,22 @@ Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, 
 
 \begin{tabularx}{\textwidth}{c|CCCCCC}
 & \STR & \DEX & \KNO & \ACU & \WIL & \CHA \\\hline
-\STR & \nameref{Berserker} & \nameref{Grappler} & Champion & \nameref{Vanguard} & Titan & \nameref{Knight} \\
-\DEX & Rogue & Ninja &  & Scout & Zephyr & Pirate \\
-\KNO & Alchemist & Wright & Tactician & Savant & Wizard & Broker \\
-\ACU & Runesmith & Deadeye & Medic & Seer & Witch & Mimic  \\
-\WIL & Chimera & Sanguine & Empyrean &  & Eidolon & Gambler \\
-\CHA & Captain & Noble & Summoner & Psychic & Shaman & Bard \\
+\STR & \nameref{Berserker} & \nameref{Grappler} & \nameref{Champion} & \nameref{Vanguard} & \nameref{Titan} & \nameref{Knight} \\
+\DEX & \nameref{Rogue} & \nameref{Ninja} &  & \nameref{Scout} & \nameref{Zephyr} & \nameref{Pirate} \\
+\KNO & \nameref{Alchemist} & \nameref{Wright} & \nameref{Tactician} & \nameref{Savant} & \nameref{Wizard} & \nameref{Broker} \\
+\ACU & \nameref{Runesmith} & \nameref{Deadeye} & \nameref{Medic} & \nameref{Seer} & \nameref{Witch} & \nameref{Mimic}  \\
+\WIL & \nameref{Chimera} & \nameref{Sanguine} & \nameref{Empyrean} &  & \nameref{Eidolon} & \nameref{Gambler} \\
+\CHA & \nameref{Captain} & \nameref{Noble} & \nameref{Summoner} & \nameref{Psychic} & \nameref{Shaman} & \nameref{Bard} \\
 \end{tabularx}
 \\[5mm]
-Class skills have flavor text and rules text.
+Classes have flavor text and rules text.
 
 Flavor text will be in \textit{italics}, and should be ignored when making rulings.
 
-\begin{itemize}
-\item Champion: Ploy: add a special effect to your next attack
-\item Titan: TODO
-\item Rogue: Hide: increase damage when attacking from stealth
-\item Ninja: Stun
-\item Scout (TODO: Ranger? Hunter?): TDOO: movement based
-\item Zephyr: TODO: flight
-\item Pirate: TODO
-\item Alchemist: Brew: create magical potions with radical effects.
-\item Wright: Make: create a nonmagical item out of raw materials.
-\item Tactician: Plan: something that rewards readying actions.
-\item Savant: TODO: expertise
-\item Wizard: TODO
-\item Broker: Bind: form a magically enforced contract
-\item Runesmith: TODO
-\item Deadeye: Seek: increase accuracy of ranged attacks
-\item Medic: TODO
-\item Seer: Gaze: see into the future to decide what path to take.
-\item Witch: TODO
-\item Mimic: TODO
-\item Chimera: TODO
-\item Sanguine: Bite: gain power by sacrificing blood, including your own
-\item Empyrean: Warp: twist space to control the battlefield.
-\item Eidolon: Cast: perform magic using nothing but yourself
-\item Gambler: Roll: summon a random magical effect.
-\item Captain: TODO
-\item Noble: TODO
-\item Summoner: Call: summon magical creatures to fight in your stead.
-\item Psychic: TODO
-\item Shaman: TODO
-\item Bard: Play: use your instrument to apply buffs and debuffs.
-\item TODO: Zombie/Undead/Corrupted class
-\end{itemize}
+%
 
-\Class{Berserker}
+\Class{Berserker}{\STR/\STR}
+{TODO: flavor}
 
 \Skill{1}{Rage}{\TIME{1}}
 {You enter a blind rage, swinging your weapon wildly and dropping your guard.}
@@ -158,30 +127,1035 @@ Flavor text will be in \textit{italics}, and should be ignored when making rulin
 {You put all of your strength behind a mighty blow.}
 {Your next melee attack has [\STR] less accuracy but does [\STR] extra damage.}
 
-\Class{Grappler}
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
 
-\Skill{1}{Hold}{\TRIG{successful Punch}}
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Grappler}{\STR/\DEX}
+{TODO: flavor}
+
+\Skill{1}{Hold}{\TRIG{successful Punch (either from you or against you)}}
 {Your hand shoots out and locks your opponent in place.}
-{TODO: add restrained condition}
+{TODO: rules: add restrained condition}
 
-\Class{Vanguard}
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Champion}{\STR/\KNO}
+{TODO: flavor}
+
+\Skill{1}{Ploy}{TODO: time}
+{TODO: flavor}
+{TODO: rules: add a special effect to your next attack}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Vanguard}{\STR/\ACU}
+{TODO: flavor}
 
 \Skill{1}{Block}{\Defend}
-{You bat away an incoming sword strike.}
+{You bat away an incoming strike.}
 {If the accuracy roll is less than [$10 + \STR$], the Attack fails.}
 
 \Skill{2}{Riposte}{\TRIG{successful Block}}
 {Your block has left your enemy wide open.}
 {You may act for up to [\ACU] seconds during this reaction.}
 
-\Class{Knight}
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
 
-\Skill{1}{TODO}{TODO}
-{TODO}
-{TODO: choose a mount or a squire}
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
 
-\Skill{2}{Charge}{TODO}
-{TODO}
-{TODO: add scaled movement speed to damage}
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Titan}{\STR/\WIL}
+{TODO: flavor}
+
+\Skill{1}{Grow}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Knight}{\STR/\CHA}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules: choose a mount or a squire}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules: add movement speed to damage}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Rogue}{\DEX/\STR}
+{TODO: flavor}
+
+\Skill{1}{Hide}{TODO: time}
+{TODO: flavor}
+{TODO: rules: increase damage when attacking from stealth}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Ninja}{\DEX/\DEX}
+{TODO: flavor}
+
+\Skill{1}{Stun}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{TODO: name}{\DEX/\KNO}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Scout}{\DEX/\ACU}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Zephyr}{\DEX/\WIL}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Pirate}{\DEX/\CHA}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Alchemist}{\KNO/\STR}
+{TODO: flavor}
+
+\Skill{1}{Brew}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Wright}{\KNO/\DEX}
+{TODO: flavor}
+
+\Skill{1}{Make}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Tactician}{\KNO/\KNO}
+{TODO: flavor}
+
+\Skill{1}{Plan}{TODO: time}
+{TODO: flavor}
+{TODO: rules: reward for readying actions}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Savant}{\KNO/\ACU}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules: something like expertise}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Wizard}{\KNO/\WIL}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Broker}{\KNO/\CHA}
+{TODO: flavor}
+
+\Skill{1}{Bind}{TODO: time}
+{TODO: flavor}
+{TODO: rules: form a magically enforced contract}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Runesmith}{\ACU/\STR}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Deadeye}{\ACU/\DEX}
+{TODO: flavor}
+
+\Skill{1}{Seek}{TODO: time}
+{TODO: flavor}
+{TODO: rules: increase accuracy of ranged attacks}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Medic}{\ACU/\KNO}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Seer}{\ACU/\ACU}
+{TODO: flavor}
+
+\Skill{1}{Gaze}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Witch}{\ACU/\WIL}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Mimic}{\ACU/\CHA}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Chimera}{\WIL/\STR}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Sanguine}{\WIL/\DEX}
+{TODO: flavor}
+
+\Skill{1}{Bite}{TODO: time}
+{TODO: flavor}
+{TODO: rules: gain power by sacrificing blood, including your own}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Empyrean}{\WIL/\KNO}
+{TODO: flavor}
+
+\Skill{1}{Warp}{TODO: time}
+{TODO: flavor}
+{TODO: rules: twist space to control the battlefield}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{TODO: name}{\WIL/\ACU}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Eidolon}{\WIL/\WIL}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Gambler}{\WIL/\CHA}
+{TODO: flavor}
+
+\Skill{1}{Roll}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Captain}{\CHA/\STR}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Noble}{\CHA/\DEX}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Summoner}{\CHA/\KNO}
+{TODO: flavor}
+
+\Skill{1}{Call}{TODO: time}
+{TODO: flavor}
+{TODO: rules: create a minion ally}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Psychic}{\CHA/\ACU}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Shaman}{\CHA/\WIL}
+{TODO: flavor}
+
+\Skill{1}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+%
+
+\Class{Bard}{\CHA/\CHA}
+{TODO: flavor}
+
+\Skill{1}{Play}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{3}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{4}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{5}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
+
+\Skill{6}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
 
 \end{document}
