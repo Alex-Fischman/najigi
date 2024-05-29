@@ -82,17 +82,31 @@ Each action either takes some amount of \{time\} to perform, or has a \{trigger\
 
 The following actions may be performed by any character.
 \begin{itemize}
+
 \item Walk \TIME{\X}: move [$\SP * \X$] spaces across simple terrain. During this time, you may perform actions that do not require the use of your legs.
+
 \item Run \TIME{\X}: move [$\SP * \X * 2$] spaces across simple terrain.
+
 \item Hike/Climb/Swim \TIME{\X}: move [$\SP * \X / 2$] spaces over difficult terrain, along a wall, or through water.
+
 \item High Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces straight upwards.
+
 \item Long Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces across a gap.
+
 \item Punch \Attack{2}: make a single-target Attack against a target in melee range. The attack has [\DEX{}] accuracy and does [$1$] damage.
-\item Hold \TRIG{successful Punch}: TODO: add restrained condition
+
+\item Hold \TRIG{successful Punch}: TODO: add Restrained condition
+
 \item Block \Defend: if the accuracy roll is less than [$10 + \STR{}$], the Attack fails.
+
 \item Dodge \Defend: if the accuracy roll is less than [$10 + \DEX{}$], the Attack fails.
+
+\item Hide \{TODO: time\}: TODO: add Hidden condition
+
 \item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
+
 \item Other: if you want to perform an action not described in the rules, the GM will tell you whether that action is possible, how long it will take, and what kind of roll you need to make, if any, to determine whether you are successful.
+
 \end{itemize}
 
 \subsection{Attacks}
@@ -304,9 +318,9 @@ TODO: Leveling up rules
 {TODO: flavor}
 {TODO: unlock}
 
-\Skill{1}{Hide}{TODO: time}
+\Skill{1}{Surprise}{\TRIG{successful Attack while Hidden}}
 {TODO: flavor}
-{TODO: rules: increase damage when attacking from stealth}
+{TODO: rules: increase damage}
 
 \Skill{2}{TODO: name}{TODO: time}
 {TODO: flavor}
