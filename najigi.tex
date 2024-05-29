@@ -78,7 +78,7 @@ Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with sq
 \pagebreak
 \section{Actions}
 
-Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of 6 seconds. Actions with trigger conditions (called \textit{reactions}) can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time.
+Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of 6 seconds. Actions with trigger conditions (called \textit{reactions}) can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time. However, only one reaction can be triggered by a single event; if you have multiple reactions with the same trigger condition, you must choose one.
 
 The following actions may be performed by any character.
 \begin{itemize}
@@ -87,9 +87,10 @@ The following actions may be performed by any character.
 \item Hike/Climb/Swim \TIME{\X}: move [$\SP * \X / 2$] spaces over difficult terrain, along a wall, or through water.
 \item High Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces straight upwards.
 \item Long Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces across a gap.
-\item Punch \Attack{2}: make a single-target Attack against a target in melee range. The attack has [\DEX{}] accuracy and does [\STR{}] damage.
+\item Punch \Attack{2}: make a single-target Attack against a target in melee range. The attack has [\DEX{}] accuracy and does [$1$] damage.
+\item Block \Defend: if the accuracy roll is less than [$10 + \STR{}$], the Attack fails.
 \item Dodge \Defend: if the accuracy roll is less than [$10 + \DEX{}$], the Attack fails.
-\item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as a reaction.
+\item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
 \item Other: if you want to perform an action not described in the rules, the GM will tell you whether that action is possible, how long it will take, and what kind of roll you need to make, if any, to determine whether you are successful.
 \end{itemize}
 
@@ -113,6 +114,8 @@ Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, 
 Classes have flavor text and rules text.
 
 Flavor text will be in \textit{italics}, and should be ignored when making rulings.
+
+TODO: Leveling up rules
 
 %
 
@@ -210,13 +213,13 @@ Flavor text will be in \textit{italics}, and should be ignored when making rulin
 {TODO: flavor}
 {TODO: unlock}
 
-\Skill{1}{Block}{\Defend}
-{You bat away an incoming strike.}
-{If the accuracy roll is less than [$10 + \STR$], the Attack fails.}
-
-\Skill{2}{Riposte}{\TRIG{successful Block}}
+\Skill{1}{Riposte}{\TRIG{successful Block}}
 {Your block has left your enemy wide open.}
 {You may act for up to [\ACU] seconds during this reaction.}
+
+\Skill{2}{TODO: name}{TODO: time}
+{TODO: flavor}
+{TODO: rules}
 
 \Skill{3}{TODO: name}{TODO: time}
 {TODO: flavor}
