@@ -35,7 +35,7 @@
 \newcommand{\Defend}{\{Defend, trigger: incoming Attack\}}
 \newcommand{\dice}[2]{\text{#1d#2}}
 
-\newcommand{\Class}[4]{\pagebreak\subsection{#1 (#2)}\label{#1}\textit{#3}\\[1mm]Unlock: #4}
+\newcommand{\Class}[4]{\pagebreak\subsection{#1 (#2)}\label{#1}\textit{#3}\\[1mm]Unlock: \TRIG{#4}}
 \newcommand{\Skill}[5]{\subsubsection{Level #1: #2 #3}\textit{#4}\\[1mm]#5}
 
 \title{Najigi}
@@ -80,7 +80,7 @@ Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with sq
 
 Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of 6 seconds. Actions with trigger conditions (called \textit{reactions}) can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time. However, only one reaction can be triggered by a single event; if you have multiple reactions with the same trigger condition, you must choose one.
 
-The following actions may be performed by any character.
+The following actions may be performed by any character:
 \begin{itemize}
 
 \item Walk \TIME{\X}: move [$\SP * \X$] spaces across simple terrain. During this time, you may perform actions that do not require the use of your legs.
@@ -103,7 +103,7 @@ The following actions may be performed by any character.
 
 \item Hide \TIME{TODO}: TODO: add Hidden condition
 
-\item Recover \TIME{6}: you or a creature within your reach gains [1] health.
+\item Heal \TIME{6}: you or a creature within your reach gains [1] health.
 
 \item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
 
@@ -236,7 +236,7 @@ Additionally, you can gain one level of each class by triggering that class's Un
 
 \Class{Vanguard}{\STR/\ACU}
 {TODO: flavor}
-{TODO: unlock}
+{Block 6 attacks within 1 minute}
 
 \Skill{1}{Riposte}{\TRIG{successful Block}}
 {Your block has left your enemy wide open.}
@@ -266,7 +266,7 @@ Additionally, you can gain one level of each class by triggering that class's Un
 
 \Class{Titan}{\STR/\WIL}
 {TODO: flavor}
-{TODO: unlock}
+{take 6 damage within 1 minute}
 
 \Skill{1}{Grow}{TODO: time}
 {TODO: flavor}
@@ -328,9 +328,9 @@ Additionally, you can gain one level of each class by triggering that class's Un
 {TODO: flavor}
 {TODO: unlock}
 
-\Skill{1}{Surprise}{\TRIG{successful Attack while Hidden}}
+\Skill{1}{Sneak Attack}{\TRIG{deal damage with an Attack while Hidden}}
 {TODO: flavor}
-{TODO: rules: increase damage}
+{The attack deals [$1$] additional damage.}
 
 \Skill{2}{TODO: name}{TODO: time}
 {TODO: flavor}
@@ -416,7 +416,7 @@ Additionally, you can gain one level of each class by triggering that class's Un
 
 \Class{Scout}{\DEX/\ACU}
 {TODO: flavor}
-{TODO: unlock}
+{Dodge 6 attacks within 1 minute}
 
 \Skill{1}{TODO: name}{TODO: time}
 {TODO: flavor}
@@ -716,7 +716,7 @@ Additionally, you can gain one level of each class by triggering that class's Un
 
 \Class{Deadeye}{\ACU/\DEX}
 {TODO: flavor}
-{TODO: unlock}
+{deal a critical hit on a ranged attack}
 
 \Skill{1}{Seek}{TODO: time}
 {TODO: flavor}
@@ -746,7 +746,7 @@ Additionally, you can gain one level of each class by triggering that class's Un
 
 \Class{Medic}{\ACU/\KNO}
 {TODO: flavor}
-{TODO: unlock}
+{Heal 6 times on creatures other than yourself within 1 minute}
 
 \Skill{1}{TODO: name}{TODO: time}
 {TODO: flavor}
@@ -1016,7 +1016,7 @@ Additionally, you can gain one level of each class by triggering that class's Un
 
 \Class{Fool}{\WIL/\CHA}
 {TODO: flavor}
-{TODO: unlock}
+{TODO: unlock (want to say ``fail 6 checks'' but don't have ``checks'' yet)}
 
 \Skill{1}{Roll}{TODO: time}
 {TODO: flavor}
