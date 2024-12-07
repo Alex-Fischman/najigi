@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage[margin=1in]{geometry}
+\usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage[colorlinks, linkcolor=blue]{hyperref}
@@ -49,21 +50,29 @@
 \pagebreak
 \section{Attributes}
 
-\begin{tabularx}{\textwidth}{C|C C}
-& Power & Speed \\\hline
-Body (Physical) & Strength & Dexterity \\
-Mind (Mental) & Knowledge & Acuity \\
-Soul (Spiritual) & Will & Charisma
-\end{tabularx}
+There are six attributes that are used to quantify a character's basic ability levels.
+
+\begin{multicols}{2}
 
 \begin{itemize}
-\item Strength [\STR] represents power, athleticism, and endurance.
-\item Dexterity [\DEX] represents speed, agility, and reflexes.
-\item Knowledge [\KNO] represents memory, wisdom, and reasoning.
-\item Acuity [\ACU] represents astuteness, intuition, and perceptiveness.
-\item Will [\WIL] represents certainty, resolve, and commitment.
-\item Charisma [\CHA] represents charm, sociality, and eloquence.
+\item Strength [\STR]: power and stamina.
+\item Dexterity [\DEX]: speed and agility.
+\item Knowledge [\KNO]: memory and logic.
+\item Acuity [\ACU]: intuition and perception.
+\item Will [\WIL]: certainty and resolve.
+\item Charisma [\CHA]: charm and eloquence.
 \end{itemize}
+
+\columnbreak
+
+\begin{tabularx}{\linewidth}{C|C C}
+& Brawn & Grace \\\hline
+Body & Strength & Dexterity \\
+Mind & Knowledge & Acuity \\
+Soul & Will & Charisma
+\end{tabularx}
+
+\end{multicols}
 
 \subsection{Stats}
 
