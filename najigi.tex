@@ -127,11 +127,11 @@ Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, 
 
 \begin{tabularx}{\textwidth}{c|CCCCCC}
 & \STR & \DEX & \KNO & \ACU & \WIL & \CHA \\\hline
-\STR & \nameref{Berserker} &  &  &  & \nameref{Titan} & \nameref{Knight} \\
+\STR &  &  &  &  &  &  \\
 \DEX &  &  &  &  & \nameref{Zephyr} &  \\
 \KNO &  &  &  &  &  &  \\
 \ACU &  &  &  &  &  &   \\
-\WIL & \nameref{Chimera} & \nameref{Sanguine} & \nameref{Empyrean} & \nameref{Haruspex} & \nameref{Eidolon} & \nameref{Fool} \\
+\WIL &  &  &  &  &  & \nameref{Fool} \\
 \CHA &  &  &  &  &  &  \\
 \end{tabularx}
 \\[5mm]
@@ -156,116 +156,42 @@ TODO: remove this page once classes are done
 \begin{itemize}
 \item skill monkey
 \item Blade: soul weapon
+\item Berserker (\STR/\STR)
+\item Knight (\STR/\CHA)
+\item Titan (\STR/\WIL)
+\item Chimera (\WIL/\STR)
+\item Sanguine (\WIL/\DEX)
+\item Empyrean (\WIL/\KNO)
+\item Haruspex (\WIL/\ACU)
+\item Eidolon (\WIL/\WIL)
 \end{itemize}
 
 \subsection{Skill Ideas}
-
-\Skill{N}{Riposte}{\TRIG{successful Block}}
-{Your block has left your enemy wide open.}
-{You may act for up to [\ACU] seconds during this reaction.}
 
 \Skill{1}{Sneak Attack}{\TRIG{deal damage with an Attack while Hidden}}
 {TODO: flavor}
 {TODO: rules}
 
-\Skill{N}{Plan}{TODO: time}
+\Skill{2}{Charge}{\TRIG{deal damage with a melee Attack}}
+{TODO: flavor}
+{TODO: rules: scale damage by movement speed}
+
+\Skill{TODO}{Riposte}{\TRIG{successful Block}}
+{Your block has left your enemy wide open.}
+{You may act for up to [\ACU] seconds during this reaction.}
+
+\Skill{TODO}{Plan}{TODO: time}
 {TODO: flavor}
 {TODO: rules: reward for readying actions}
 
-%
-
-\Class{Berserker}{\STR/\STR}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{Rage}{\TIME{1}}
+\Skill{TODO}{Rage}{\TIME{1}}
 {You enter a blind rage, swinging your weapon wildly and dropping your guard.}
 {Until the start of your next turn, your melee attacks do twice as much damage, but you take twice as much damage from melee attacks.}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
-\Class{Titan}{\STR/\WIL}
-{TODO: flavor}
-{take 6 damage within 1 minute}
-
-\Skill{1}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
-\Class{Knight}{\STR/\CHA}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules: choose a mount}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules: add movement speed to damage}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
 
 %
 
 \Class{Zephyr}{\DEX/\WIL}
-{TODO: flavor: master of winds}
+{TODO: flavor: master of winds, airbender}
 {TODO: unlock}
 
 \Skill{1}{Gust}{TODO: time}
@@ -294,161 +220,11 @@ TODO: remove this page once classes are done
 
 %
 
-\Class{Chimera}{\WIL/\STR}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
-\Class{Sanguine}{\WIL/\DEX}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{Bite}{TODO: time}
-{TODO: flavor}
-{TODO: rules: gain power by sacrificing blood, including your own}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
-\Class{Empyrean}{\WIL/\KNO}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{Warp}{TODO: time}
-{TODO: flavor}
-{TODO: rules: twist space to control the battlefield}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
-\Class{Haruspex}{\WIL/\ACU}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
-\Class{Eidolon}{\WIL/\WIL}
-{TODO: flavor}
-{TODO: unlock}
-
-\Skill{1}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{6}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-%
-
 \Class{Fool}{\WIL/\CHA}
-{TODO: flavor}
+{TODO: flavor: metagame-y}
 {TODO: unlock (want to say ``fail 6 checks'' but don't have ``checks'' yet)}
 
-\Skill{1}{Gamble}{TODO: time}
+\Skill{1}{Raise}{\TRIG{fail a check}}
 {TODO: flavor}
 {TODO: rules}
 
