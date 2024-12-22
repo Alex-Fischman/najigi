@@ -32,6 +32,7 @@
 \newcommand{\TIME}[1]{\{time: #1 second\if1=#1{}\else{s}\fi\}}
 \newcommand{\TRIG}[1]{\{trigger: #1\}}
 \newcommand{\Attack}[1]{\{Attack, time: #1 second\if1=#1{}\else{s}\fi\}}
+\newcommand{\Melee}[1]{\{Attack, Melee, time: #1 second\if1=#1{}\else{s}\fi\}}
 \newcommand{\Defend}{\{Defend, trigger: incoming Attack\}}
 \newcommand{\dice}[2]{\text{#1d#2}}
 
@@ -78,7 +79,7 @@ Soul & Will & Charisma
 \section{Actions}
 
 Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of [6] seconds. Actions with trigger conditions (called \textit{reactions}) can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time. However, only one reaction can be triggered by a single event; if you have multiple reactions with the same trigger condition, you must choose one.
-
+\\[5mm]
 The following actions may be performed by any character:
 \begin{itemize}
 
@@ -92,16 +93,6 @@ The following actions may be performed by any character:
 
 \item Long Jump \TIME{2}: move [$1 + (\STR / 3)$] spaces across a gap.
 
-\item Punch \Attack{2}: make a single-target Attack against a target in melee range. The attack has [\STR+\DEX] accuracy and does [$1$] damage.
-
-\item Block \Defend: if the accuracy roll is less than [$10 + \STR$], the Attack fails.
-
-\item Dodge \Defend: if the accuracy roll is less than [$10 + \DEX$], the Attack fails.
-
-\item Heal \TIME{6}: you or a creature within your reach gains [1] health.
-
-\item Grab \TRIG{successful Punch}: TODO: add Restrained condition
-
 \item Hide \TIME{TODO}: TODO: add Hidden condition
 
 \item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
@@ -112,9 +103,25 @@ The following actions may be performed by any character:
 
 Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with square grids, each side should be 1.5m long. For maps with hexagonal grids, each hexagon’s \textit{short diagonal} should be 1.5m long.
 
-\subsection{Attacks}
+\pagebreak
+\section{Attacks}
 
 Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend reactions, if they have any. If none of the Defend reactions stop your Attack, the attack succeeds, and the target loses [\DAM] health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage, even if it hits (a critical failure). However, if the die lands on a 20, then the attack will deal an additional [$\DAM$] damage (a critical hit)!
+\\[5mm]
+The following actions may be performed by any character:
+\begin{itemize}
+
+\item Punch \Melee{2}: make an Attack against a target in melee range. The attack has [\DEX] accuracy and does [\STR] damage.
+
+\item Block \Defend: prevent the Attack if the accuracy roll is less than [$10 + \STR$].
+
+\item Dodge \Defend: prevent the Attack if the accuracy roll is less than [$10 + \DEX$].
+
+\item Heal \TIME{6}: you or a creature within your reach gains [1] health.
+
+\item Grab \TRIG{successful Punch}: TODO: add Restrained condition
+
+\end{itemize}
 
 \pagebreak
 \section{Classes}
@@ -154,7 +161,7 @@ TODO: remove this page once classes are done
 
 \Skill{TODO}{Rage}{\TIME{1}}
 {You enter a blind rage, swinging your weapon wildly and dropping your guard.}
-{Until the start of your next turn, your melee attacks do twice as much damage, but you take twice as much damage from melee attacks.}
+{Until the start of your next turn, your melee attacks do twice as much damage, but you take twice as much damage from attacks.}
 
 \item Grappler (\STR/\DEX)
 \item Champion (\STR/\KNO)
@@ -230,7 +237,7 @@ TODO: remove this page once classes are done
 {TODO: flavor}
 {TODO: rules: straight line movement}
 
-\Skill{2}{Gale}{TODO: time}
+\Skill{2}{Thermal}{TODO: time}
 {TODO: flavor}
 {TODO: rules}
 
@@ -256,7 +263,7 @@ TODO: remove this page once classes are done
 {TODO: flavor: metagame-y}
 {TODO: unlock (want to say ``fail 6 checks'' but don't have ``checks'' yet)}
 
-\Skill{1}{Raise}{\TRIG{fail a check}}
+\Skill{1}{Double or Nothing}{\TRIG{fail a check}}
 {TODO: flavor}
 {TODO: rules}
 
