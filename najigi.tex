@@ -31,9 +31,9 @@
 \newcommand{\X}{\text{{\lower 0.2mm \hbox{X}}}}
 \newcommand{\TIME}[1]{\{time: #1 second\if1=#1{}\else{s}\fi\}}
 \newcommand{\TRIG}[1]{\{trigger: #1\}}
-\newcommand{\Attack}[1]{\{Attack, time: #1 second\if1=#1{}\else{s}\fi\}}
-\newcommand{\Melee}[1]{\{Attack, Melee, time: #1 second\if1=#1{}\else{s}\fi\}}
-\newcommand{\Defend}{\{Defend, trigger: incoming Attack\}}
+\newcommand{\ATTACK}[1]{\{Attack, time: #1 second\if1=#1{}\else{s}\fi\}}
+\newcommand{\MELEE}[1]{\{Attack, Melee, time: #1 second\if1=#1{}\else{s}\fi\}}
+\newcommand{\DEFEND}{\{Defend, trigger: incoming Attack\}}
 \newcommand{\dice}[2]{\text{#1d#2}}
 
 \newcommand{\Class}[4]{\pagebreak\subsection{#1 (#2)}\label{#1}\textit{#3}\\[1mm]Unlock: \TRIG{#4}}
@@ -83,7 +83,7 @@ Each action either takes some amount of \{time\} to perform, or has a \{trigger\
 The following actions may be performed by any character:
 \begin{itemize}
 
-\item Walk \TIME{\X}: move [$\X$] spaces across simple terrain. During this time, you may perform actions that do not require the use of your legs.
+\item Walk \TIME{\X}: move [$\X$] spaces across simple terrain. During this time, you may perform actions that do not require the use of your legs. Unless otherwise indicated, abilities from classes require only the use of your arms.
 
 \item Run \TIME{\X}: move [$\X * 2$] spaces across simple terrain.
 
@@ -107,11 +107,11 @@ Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, 
 The following actions may be performed by any character:
 \begin{itemize}
 
-\item Punch \Melee{2}: make an Attack against a target in melee range. The attack has [\DEX] accuracy and does [\STR] damage.
+\item Punch \MELEE{2}: make an Attack against a target in melee range. The attack has [\DEX] accuracy and does [\STR] damage.
 
-\item Block \Defend: prevent the Attack if the accuracy roll is less than [$10 + \STR$].
+\item Block \DEFEND: prevent the Attack if the accuracy roll is less than [$10 + \STR$].
 
-\item Dodge \Defend: prevent the Attack if the accuracy roll is less than [$10 + \DEX$].
+\item Dodge \DEFEND: prevent the Attack if the accuracy roll is less than [$10 + \DEX$].
 
 \item Heal \TIME{6}: you or a creature within your reach gains [1] health.
 
@@ -229,17 +229,17 @@ TODO: remove this page once classes are done
 {TODO: flavor: master of the skies, airbender}
 {TODO: unlock}
 
-\Skill{1}{Gust}{TODO: time}
-{TODO: flavor}
-{TODO: rules: straight line movement}
+\Skill{1}{Gust}{\TIME{3}}
+{The air follows your movements, bending to your will.}
+{Move a small object up to [\DEX] spaces in any direction, or move a large object up to [\DEX/2] spaces in any direction.}
 
-\Skill{2}{Thermal}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
+\Skill{2}{Thermal}{\TIME{2}}
+{Your cloak billows in the wind as you soar skyward.}
+{Move up to [\DEX/2] spaces upwards. You don't start falling until the end of your next turn.}
 
-\Skill{3}{Squall}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
+\Skill{3}{Vacuum}{\TIME{4}}
+{With immense focus, you rend the air in front of you.}
+{Create a spherical vacuum with a [$1 + \WIL / 3$]-space diameter. Creatures inside the vacuum start to suffocate as if underwater. While the vacuum exists, you cannot use ANY abilities from classes. At any time on your turn, you may release the vacuum. When you do, the shockwave from the implosion will deal [\WIL] damage to each creature inside it.}
 
 \Skill{4}{Storm}{TODO: time}
 {TODO: flavor}
@@ -251,7 +251,7 @@ TODO: remove this page once classes are done
 
 \Skill{6}{Hurricane}{TODO: time}
 {TODO: flavor}
-{TODO: rules: full flight in the eye}
+{TODO: rules: create a hurricane around you, double wind spells inside it?}
 
 %
 
