@@ -122,14 +122,13 @@ The following actions may be performed by any character:
 \pagebreak
 \section{Classes}
 
-\begin{tabularx}{\textwidth}{c|CCCCCC}
-& \STR & \DEX & \KNO & \ACU & \WIL & \CHA \\\hline
-\STR &  &  &  &  &  &  \\
-\DEX &  &  &  &  & \nameref{Zephyr} &  \\
-\KNO &  &  &  &  &  &  \\
-\ACU &  &  &  &  &  &   \\
-\WIL &  &  &  &  &  & \nameref{Fool} \\
-\CHA &  &  &  &  &  &  \\
+\begin{tabularx}{\textwidth}{CCCCCC}
+\nameref{Berserker} & \nameref{Grappler} & \nameref{Champion} & \nameref{Vanguard} & \nameref{Chimera} & \nameref{Knight} \\
+ & \nameref{Rogue} &  &  & \nameref{Sanguine} &  \\
+ &  & \nameref{Savant} &  & \nameref{Wizard} &  \\
+ & \nameref{Deadeye} &  &  &  &   \\
+ & \nameref{Zephyr} & \nameref{Empyrean} &  & \nameref{Eidolon} & \nameref{Fool} \\
+ &  & \nameref{Noble} & \nameref{Mimic} & \nameref{Summoner} & \nameref{Bard} \\
 \end{tabularx}
 \\[5mm]
 Classes have flavor text and rules text.
@@ -146,92 +145,143 @@ When the party reaches a major milestone in their quest, each character should l
 
 Additionally, you can gain one level of each class by triggering that class's Unlock condition. When you do, you gain the first level of that class immediately, with exactly the same benefits that you would if you had chosen that class at a milestone. Once you have triggered an Unlock condition once, you gain no further benefits from triggering it additional times.
 
-\pagebreak
-\subsection{Class Ideas}
+%
 
-TODO: remove this page once classes are done
+\Class{Berserker}{\STR/\STR}
+{TODO: flavor: Barbarian}
+{TODO: unlock}
 
-\begin{itemize}
-\item Blade: soul weapon
-\item Fateweaver
-\item Berserker (\STR/\STR)
-
-\Skill{TODO}{Rage}{\TIME{1}}
+\Skill{TODO}{Wrath}{\TIME{1}}
 {You enter a blind rage, swinging your weapon wildly and dropping your guard.}
 {Until the start of your next turn, your melee attacks do twice as much damage, but you take twice as much damage from attacks.}
 
-\item Grappler (\STR/\DEX)
-\item Champion (\STR/\KNO)
-\item Vanguard (\STR/\ACU)
-
-\Skill{TODO}{Riposte}{\TRIG{successful Block}}
-{Your block has left your enemy wide open.}
-{You may act for up to [\ACU] seconds during this reaction.}
-
-\item Titan (\STR/\WIL)
-\item Knight (\STR/\CHA)
-
-\Skill{2}{Charge}{\TRIG{deal damage with a melee Attack}}
-{TODO: flavor}
-{TODO: rules: scale damage by movement speed}
-
-\item Rogue (\DEX/\STR)
-
-\Skill{1}{Sneak Attack}{\TRIG{deal damage with an Attack while Hidden}}
-{TODO: flavor}
-{TODO: rules}
-
-\item Ninja (\DEX/\DEX)
-\item Duelist (\DEX/\KNO)
-\item Scout (\DEX/\ACU)
-\item Zephyr (\DEX/\WIL)
-\item Pirate (\DEX/\CHA)
-\item Alchemist (\KNO/\STR)
-\item Wright (\KNO/\DEX)
-\item Tactician (\KNO/\KNO)
-
-\Skill{TODO}{Plan}{TODO: time}
-{TODO: flavor}
-{TODO: rules: reward for readying actions}
-
-\item Savant (\KNO/\ACU): skill monkey class
-\item Wizard (\KNO/\WIL)
-\item Patron (\KNO/\CHA)
-\item Runesmith (\ACU/\STR)
-\item Deadeye (\ACU/\DEX)
-\item Medic (\ACU/\KNO)
-\item Sleuth (\ACU/\ACU)
-\item Witch (\ACU/\WIL)
-\item Mimic (\ACU/\CHA)
-\item Chimera (\WIL/\STR)
-\item Sanguine (\WIL/\DEX)
-\item Empyrean (\WIL/\KNO)
-\item Haruspex (\WIL/\ACU)
-\item Eidolon (\WIL/\WIL)
-\item Noble (\CHA/\STR): money, connections
-\item Summoner (\CHA/\KNO)
-\item Psychic (\CHA/\ACU)
-\item Shaman (\CHA/\WIL)
-\item Bard (\CHA/\CHA)
-\end{itemize}
-
-\subsection{Race Ideas}
-\begin{itemize}
-\item Human: +0 to all
-\item Dwarf: +1 to brawn stats, -1 to grace
-\item Elf: +1 to grace, -1 to brawn
-\item etc.
-\end{itemize}
+TODO
 
 %
 
-\Class{Zephyr}{\DEX/\WIL}
-{TODO: flavor: master of the skies, airbender}
+\Class{Grappler}{\STR/\DEX}
+{TODO: flavor}
+{TODO: unlock}
+
+TODO
+
+%
+
+\Class{Champion}{\STR/\KNO}
+{TODO: flavor: Battlemaster}
+{TODO: unlock}
+
+TODO
+
+%
+
+\Class{Vanguard}{\STR/\ACU}
+{TODO: flavor}
+{TODO: unlock}
+
+\Skill{2}{Riposte}{\TRIG{successful Block}}
+{Your block has left your enemy wide open.}
+{You may act for up to [\ACU] seconds during this reaction.}
+
+TODO
+
+%
+
+\Class{Chimera}{\STR/\WIL}
+{TODO: flavor: choose a second form with better stats, Hulk/Werewolf/Wild Shape}
+{TODO: unlock}
+
+TODO
+
+%
+
+\Class{Knight}{\STR/\CHA}
+{TODO: flavor}
+{TODO: unlock}
+
+\Skill{TODO: 1 or 3}{Charge}{\TRIG{deal damage with a melee Attack}}
+{TODO: flavor}
+{TODO: rules: scale damage by movement speed}
+
+TODO
+
+%
+
+%
+
+\Class{Rogue}{\DEX/\DEX}
+{TODO: flavor: Rogue}
+{TODO: unlock}
+
+TODO
+
+%
+
+%
+
+%
+
+\Class{Sanguine}{\DEX/\WIL}
+{TODO: flavor: Vampire, consume blood for power, including your own}
+{TODO: unlock}
+
+TODO
+
+%
+
+%
+
+%
+
+%
+
+\Class{Savant}{\KNO/\KNO}
+{TODO: flavor: skill monkey class}
+{TODO: unlock}
+
+TODO
+
+%
+
+%
+
+\Class{Wizard}{\KNO/\WIL}
+{TODO: flavor}
+{TODO: unlock}
+
+TODO
+
+%
+
+%
+
+%
+
+\Class{Deadeye}{\ACU/\DEX}
+{TODO: flavor: Sniper}
+{TODO: unlock}
+
+TODO
+
+%
+
+%
+
+%
+
+%
+
+%
+
+%
+
+\Class{Zephyr}{\WIL/\DEX}
+{TODO: flavor: Airbender}
 {TODO: unlock}
 
 \Skill{1}{Gust}{\TIME{3}}
 {The air follows your movements, bending to your will.}
-{Move a small object up to [\DEX] spaces in any direction, or move a large object up to [\DEX/2] spaces in any direction. TODO: dex save for characters}
+{Move a small object up to [\WIL] spaces in any direction.}
 
 \Skill{2}{Thermal}{\TIME{2}}
 {Your cloak billows in the wind as you soar skyward.}
@@ -241,17 +291,25 @@ TODO: remove this page once classes are done
 {With immense focus, you rend the air in front of you.}
 {Create a spherical vacuum with a [$1 + \WIL / 3$]-space diameter. Creatures inside the vacuum start to suffocate as if underwater. While the vacuum exists, you cannot use ANY abilities from classes. At any time on your turn, you may release the vacuum. When you do, the shockwave from the implosion will deal [\WIL] damage to each creature inside it.}
 
-\Skill{4}{Storm}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
+TODO
 
-\Skill{5}{Tempest}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
+%
 
-\Skill{6}{Hurricane}{TODO: time}
-{TODO: flavor}
-{TODO: rules: create a hurricane around you, double wind spells inside it?}
+\Class{Empyrean}{\WIL/\KNO}
+{TODO: flavor: spatial mage}
+{TODO: unlock}
+
+TODO
+
+%
+
+%
+
+\Class{Eidolon}{\WIL/\WIL}
+{TODO: flavor: raw conduit of magic}
+{TODO: unlock}
+
+TODO
 
 %
 
@@ -263,24 +321,48 @@ TODO: remove this page once classes are done
 {TODO: flavor}
 {TODO: rules}
 
-\Skill{2}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{3}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{4}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
-
-\Skill{5}{TODO: name}{TODO: time}
-{TODO: flavor}
-{TODO: rules}
+TODO
 
 \Skill{6}{Alter}{\TRIG{gaining this ability}}
 {TODO: flavor}
 {Add, remove, or change one letter in the rules text of one of your abilities.}
+
+%
+
+%
+
+%
+
+\Class{Noble}{\CHA/\KNO}
+{TODO: flavor: money and connections}
+{TODO: unlock}
+
+TODO
+
+%
+
+\Class{Mimic}{\CHA/\ACU}
+{TODO: flavor}
+{TODO: unlock}
+
+TODO
+
+%
+
+\Class{Summoner}{\CHA/\WIL}
+{TODO: flavor: needs a better name}
+{TODO: unlock}
+
+TODO
+
+%
+
+\Class{Bard}{\CHA/\CHA}
+{TODO: flavor}
+{TODO: unlock}
+
+TODO
+
+%
 
 \end{document}
