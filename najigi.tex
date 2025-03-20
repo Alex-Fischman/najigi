@@ -148,7 +148,7 @@ The following actions may be performed by any character:
 
 \item Hide \TIME{TODO}: TODO: add Hidden condition
 
-\item Ready \TIME{X}: choose a trigger condition and a list of actions that takes at most X seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
+\item Ready \TIME{\X}: choose a trigger condition and a list of actions that takes at most [\X] seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
 
 \item Other: if you want to perform an action not described in the rules, the GM will tell you whether that action is possible, how long it will take, and what kind of roll you need to make, if any, to determine whether you are successful.
 
@@ -244,9 +244,9 @@ TODO
 {TODO: flavor (make the name weirder?)}
 {TODO: unlock}
 
-\Skill{1}{Charge}{\TIME{4}}
-{TODO: flavor: jousting}
-{TODO: rules: note start location. use 4s of movement. make 1 $<$2s attack. if you hit, add [$||end-start||/4$] to damage}
+\Skill{1}{Charge}{\TIME{\X}}
+{TODO: flavor: use momentum to put force behind an attack}
+{Choose a Melee Attack action that takes exactly [\X] seconds. Once before the end of this turn, you may make the chosen attack. When you do, if the attack hits, add [$D / (6 - \X)$] to the damage of the attack, where $D$ is the distance between where you activated this skill and where you made the attack.}
 
 \Skill{2}{Befriend}{\TRIG{riding a mount}}
 {TODO: flavor}
