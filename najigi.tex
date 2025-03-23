@@ -25,7 +25,6 @@
 \newcommand{\ACU}{\texttt{ACU}}
 \newcommand{\WIL}{\texttt{WIL}}
 \newcommand{\CHA}{\texttt{CHA}}
-\newcommand{\HP}{\texttt{HP}}
 \newcommand{\ACC}{\texttt{ACC}}
 \newcommand{\DAM}{\texttt{DAM}}
 \newcommand{\X}{\text{{\lower 0.2mm \hbox{X}}}}
@@ -132,6 +131,10 @@ Every character starts with one of the following stat blocks:
 
 \end{multicols}
 
+\subsection{Health}
+
+Each character has some amount of Health, as well as some amount of Maximum Health. A character falls Unconscious when its Health is reduced to [0]. Each character starts with a Maximum Health of [6].
+
 \pagebreak
 \section{Actions}
 
@@ -159,7 +162,7 @@ Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with sq
 \pagebreak
 \section{Attacks}
 
-Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend reactions, if they have any. If none of the Defend reactions stop your Attack, the attack succeeds, and the target loses [\DAM] health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage, even if it hits (a critical failure). However, if the die lands on a 20, then the attack will deal an additional [$\DAM$] damage (a critical hit)!
+Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend reactions, if they have any. If none of the Defend reactions stop your Attack, the attack succeeds, and the target loses [\DAM] Health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage, even if it hits (a critical failure). However, if the die lands on a 20, then the attack will deal an additional [$\DAM$] damage (a critical hit)!
 \\[5mm]
 The following actions may be performed by any character:
 \begin{itemize}
@@ -170,7 +173,7 @@ The following actions may be performed by any character:
 
 \item Dodge \DEFEND: prevent the Attack if the accuracy roll is less than [$10 + \DEX$].
 
-\item Heal \TIME{6}: you or a creature within your reach gains [1] health.
+\item Heal \TIME{6}: you or a creature within your reach gains [1] Health.
 
 \item Grab \TRIG{successful Punch}: TODO: add Restrained condition
 
