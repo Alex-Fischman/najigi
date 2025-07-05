@@ -133,9 +133,8 @@ Every character starts with one of the following stat blocks:
 
 \subsection{Health}
 
-Each character has some amount of Health, as well as some amount of Maximum Health. A character falls Unconscious when its Health is reduced to [0]. Each character starts with a Maximum Health of [6].
-
-TODO: initial Max Health is based on the chosen stat block?
+Each character's Maximum Health is always [\STR+\DEX+\KNO+\ACU+\WIL+\CHA]. Each character starts with a Maximum Health of [6].
+Each character has some amount of Health, which starts out at that character's Maximum Health. A character falls Unconscious when its Health is reduced to [0].
 
 \pagebreak
 \section{Actions}
@@ -201,16 +200,11 @@ Flavor text will be in \textit{italics}, and should be ignored when making rulin
 
 When the party reaches a milestone in their quest, each character should level up. To level up, choose one of the following options:
 \begin{itemize}
-\item Gain one level in a class of your choice. This will result in gaining one or more additional abilities, be they timed actions, reactions, or passives.
-\item Gain two points in one of the six stats. Then, lose one point in one of the six stats. This will result in your character being better or worse at things that they are already able to do.
+\item Gain one level in a class of your choice. This will result in gaining one or more additional abilities, such as actions, reactions, or passives.
+\item Gain two points in one of the six stats. Then, lose one point in one of the six stats. This will result in your character being better or worse at things that they are already able to do. This will increase your Maximum Health by [1].
 \end{itemize}
 
-Then, increase your Maximum Health by the value in the list below. If you chose to gain a level in a class, use that class's primary stat. If you chose to gain points in your stats, use the stat that you increased.
-\begin{center}
-\STR: 6, \DEX: 5, \KNO: 2, \ACU: 1, \WIL: 4, \CHA: 3
-\end{center}
-
-Separately, you can gain one level of each class by triggering that class's Unlock condition. When you do, you gain the first level of that class immediately. Once you have triggered an Unlock condition once, you gain no further benefits from triggering it additional times. Unlike reaching a milestone, you do not increase your Maximum Health from triggering Unlock conditions.
+Separately, you can gain the first level of each class by triggering that class's Unlock condition. When you do, you gain the first level of that class immediately. Triggering the Unlock condition does nothing if you've already gained the first level of that class.
 
 %
 
