@@ -139,7 +139,7 @@ Each character has some amount of Health, which starts out at that character's M
 \pagebreak
 \section{Actions}
 
-Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of [6] seconds. Actions with trigger conditions (called \textit{reactions}) can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time. However, only one reaction can be triggered by a single event; if you have multiple reactions with the same trigger condition, you must choose one.
+Each action either takes some amount of \{time\} to perform, or has a \{trigger\} condition. On your turn, you may continue performing actions until you have acted for a total of [6] seconds. Actions with trigger conditions can be performed instantly whenever their trigger condition is met (even if it’s not your turn), and don’t require using your action time. However, only one action can be triggered by a single event; if you have multiple actions with the same trigger condition, you must choose one.
 \\[5mm]
 The following actions may be performed by any character:
 \begin{itemize}
@@ -150,7 +150,7 @@ The following actions may be performed by any character:
 
 \item Hike/Climb/Swim \TIME{\X}: move [$\X / 2$] spaces over difficult terrain, along a wall, or through water.
 
-\item Ready \TIME{\X}: choose a trigger condition and a list of actions that takes at most [\X] seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one reaction. You may only have one reaction readied at a time.
+\item Ready \TIME{\X}: choose a trigger condition and a list of actions that takes at most [\X] seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one triggered action. You may only have one action readied at a time.
 
 \item Other: if you want to perform an action not described in the rules, the GM will tell you whether that action is possible, how long it will take, and what kind of roll you need to make, if any, to determine whether you are successful.
 
@@ -161,7 +161,7 @@ Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with sq
 \pagebreak
 \section{Attacks}
 
-Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend reactions, if they have any. If none of the Defend reactions stop your Attack, the attack succeeds, and the target loses [\DAM] Health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage, even if it hits (a critical failure). However, if the die lands on a 20, then the attack will deal an additional [$\DAM$] damage (a critical hit)!
+Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend actions, if they have any. If none of the Defend actions stop your Attack, the attack succeeds, and the target loses [\DAM] Health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage, even if it hits (a critical failure). However, if the die lands on a 20, then the attack will deal an additional [$\DAM$] damage (a critical hit)!
 \\[5mm]
 The following actions may be performed by any character:
 \begin{itemize}
@@ -196,7 +196,7 @@ Flavor text will be in \textit{italics}, and should be ignored when making rulin
 
 When the party reaches a milestone in their quest, each character should level up. To level up, choose one of the following options:
 \begin{itemize}
-\item Gain one level in a class of your choice. This will result in gaining one or more additional abilities, such as actions, reactions, or passives.
+\item Gain one level in a class of your choice. This will result in gaining a new action.
 \item Gain two points in one of the six stats. Then, lose one point in one of the six stats. This will result in your character being better or worse at things that they are already able to do. This will increase your Maximum Health by [1].
 \end{itemize}
 
@@ -226,7 +226,7 @@ TODO
 
 \Skill{2}{Riposte}{\TRIG{successful Block}}
 {Your block has left your enemy wide open.}
-{You may act for up to [\ACU] seconds during this reaction.}
+{You may act for up to [\ACU] seconds during this action.}
 
 TODO
 
