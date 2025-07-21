@@ -24,7 +24,7 @@
 \newcommand{\KNO}{\texttt{KNO}}
 \newcommand{\ACU}{\texttt{ACU}}
 \newcommand{\WIL}{\texttt{WIL}}
-\newcommand{\CHA}{\texttt{CHA}}
+\newcommand{\FOR}{\texttt{FOR}}
 \newcommand{\ACC}{\texttt{ACC}}
 \newcommand{\DAM}{\texttt{DAM}}
 \newcommand{\X}{\text{{\lower 0.2mm \hbox{X}}}}
@@ -60,7 +60,7 @@ There are six stats that are used to quantify a character's basic ability levels
 \item Knowledge [\KNO]: memory and logic.
 \item Acuity [\ACU]: intuition and perception.
 \item Willpower [\WIL]: certainty and resolve.
-\item Charisma [\CHA]: charm and eloquence.
+\item Fortune [\FOR]: luck and wealth.
 \end{itemize}
 
 \columnbreak
@@ -69,7 +69,7 @@ There are six stats that are used to quantify a character's basic ability levels
 & Brawn & Grace \\\hline
 Body & Strength & Dexterity \\
 Mind & Knowledge & Acuity \\
-Soul & Willpower & Charisma
+Soul & Willpower & Fortune
 \end{tabularx}
 
 \end{multicols}
@@ -133,7 +133,7 @@ Every character starts with one of the following stat blocks:
 
 \subsection{Health}
 
-Each character's Maximum Health is always [\STR+\DEX+\KNO+\ACU+\WIL+\CHA]. Each character starts with a Maximum Health of [6].
+Each character's Maximum Health is always [\STR+\DEX+\KNO+\ACU+\WIL+\FOR]. Each character starts with a Maximum Health of [6].
 Each character has some amount of Health, which starts out at that character's Maximum Health. A character falls Unconscious when its Health is reduced to [0].
 
 \pagebreak
@@ -238,7 +238,7 @@ TODO
 
 %
 
-\Class{Knight}{\STR/\CHA}
+\Class{Knight}{\STR/\FOR}
 {TODO: flavor (make the name weirder?)}
 {TODO: unlock}
 
@@ -248,7 +248,7 @@ TODO
 
 \Skill{2}{Mount}{TODO}
 {TODO: flavor}
-{TODO. While you are riding it, your mount gains [\CHA] TODO, TODO, and TODO.}
+{TODO. While you are riding it, your mount gains [\FOR] TODO, TODO, and TODO.}
 
 TODO
 
@@ -330,7 +330,7 @@ TODO
 
 %
 
-\Class{Fool}{\CHA/\CHA}
+\Class{Fool}{\FOR/\FOR}
 {TODO: flavor: metagame-y}
 {TODO: unlock (want to say ``fail 6 checks'' but don't have ``checks'' yet)}
 
