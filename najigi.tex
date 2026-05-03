@@ -134,7 +134,7 @@ Every character starts with one of the following stat blocks:
 \subsection{Health}
 
 Each character's Maximum Health is always [\STR+\DEX+\KNO+\ACU+\WIL+\FOR]. Each character starts with a Maximum Health of [6].
-Each character has some amount of Health, which starts out at that character's Maximum Health. A character falls Unconscious when its Health is reduced to [0].
+Each character has some amount of Health, which starts out at that character's Maximum Health. A character falls Unconscious when their Health is reduced to [0].
 
 \pagebreak
 \section{Actions}
@@ -148,7 +148,7 @@ The following actions may be performed by any character:
 
 \item Run \TIME{\X}: move [$\X * 2$] spaces across simple terrain.
 
-\item Hike/Climb/Swim \TIME{\X}: move [$\X / 2$] spaces over difficult terrain, along a wall, or through water.
+\item Hike/Climb/Swim \TIME{\X}: move [$\X / 2$] spaces over difficult terrain, along a climbable wall, or through water.
 
 \item Ready \TIME{\X}: choose a trigger condition and a list of actions that takes at most [\X] seconds. The first time that the trigger occurs before the start of your next turn, all of your chosen actions occur as one triggered action. You may only have one action readied at a time.
 
@@ -161,7 +161,7 @@ Note: 1 space is 1.5 meters (1.5m) long, or about 5 feet (5ft). For maps with sq
 \pagebreak
 \section{Attacks}
 
-Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend actions, if they have any. If none of the Defend actions stop your Attack, the attack succeeds, and the target loses [\DAM] Health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage, even if it hits (a critical failure). However, if the die lands on a 20, then the attack will deal an additional [$\DAM$] damage (a critical hit)!
+Attacks have accuracy [\ACC] and do damage [\DAM]. To perform an Attack action, roll [$\dice{1}{20} + \ACC$]. This will trigger the target’s Defend actions, if they have any. If none of the Defend actions stop your Attack, the attack succeeds, and the target loses [\DAM] Health. Additionally, when you roll for the Attack action, there are two special outcomes. If the die lands on a 1, then the attack will deal no damage (a critical failure). However, if the die lands on a 20, then the attack will deal twice as much damage (a critical hit)!
 \\[5mm]
 The following actions may be performed by any character:
 \begin{itemize}
