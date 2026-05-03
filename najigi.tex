@@ -180,7 +180,7 @@ The following actions may be performed by any character:
 \section{Classes}
 
 \begin{tabularx}{\textwidth}{CCCCCC}
-\nameref{Berserker} &  &  & \nameref{Vanguard} & Chimera & \nameref{Knight} \\
+\nameref{Berserker} &  &  & \nameref{Vanguard} & Chimera & \nameref{Cavalier} \\
  & Rogue &  &  &  &  \\
  &  & Savant &  & Wizard &  \\
  &  &  & Deadeye &  &   \\
@@ -234,17 +234,17 @@ TODO
 
 %
 
-\Class{Knight}{\STR/\FOR}
-{TODO: flavor (make the name weirder?)}
+\Class{Cavalier}{\STR/\FOR}
+{TODO: flavor}
 {TODO: unlock}
 
-\Skill{1}{Charge}{\TIME{1}}
-{TODO: flavor: use momentum to put force behind an attack}
-{If you make a Melee Attack immediately after using this skill, that attack does [\X] additional damage, where [\X] is the distance traveled while using this skill.}
-
-\Skill{2}{Mount}{TODO}
+\Skill{1}{Mount}{TODO}
 {TODO: flavor}
 {TODO: you gain a mount. While you are riding it, your mount gains [\FOR] TODO, TODO, and TODO.}
+
+\Skill{2}{Charge}{\TIME{1}}
+{TODO: flavor: use momentum to put force behind an attack}
+{Your next Melee Attack this turn does [$\min(\X, \STR)$] additional damage, where [\X] is the distance traveled while using this skill.}
 
 TODO
 
